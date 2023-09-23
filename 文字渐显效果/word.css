@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.box {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    background-color: pink;
+}
+.box span {
+    color: black;
+    font-size: 1.3vw;
+}
