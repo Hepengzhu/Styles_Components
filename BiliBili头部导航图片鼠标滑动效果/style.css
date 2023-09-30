@@ -69,7 +69,7 @@ header .morning,
 header .afternoon,
 header .tree,
 header .view {
-    transition: all 2s ease-out;
+    transition: all 1.5s ease-out;
 }
 
 /* 鼠标移动时，取消过度效果 */
