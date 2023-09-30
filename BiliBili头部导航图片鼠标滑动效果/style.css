@@ -38,16 +38,24 @@ header img , header video {
 /* 早上的应在最上层 */
 header .morning {
     z-index: 20;
+    /* 鼠标移动 0 -- 0.25  0.25时白天消失*/   
+    /* calc()函数内表达式一定要空格隔开 */
+    opacity: calc(1 - (var(--percentage) - 0.25 ) / 0.25 );
 }
 
 header .afternoon {
     z-index: 10;
+    /* 0.5 时下午消失 晚上出现 */
+    opacity: calc(1 - (var(--percentage) - 0.5 ) / 0.5 );
 }
 
+
+/* 鼠标移动，图片移动 */
 header .view {
     transform: translateX(calc(var(--percentage)*100px));
 }
 
+/* 通过移动不同的距离的实现视觉差 */
 header .tree {
-    transform: translateX(calc(var(--percentage)*100px));
+    transform: translateX(calc(var(--percentage)*70px));
 }

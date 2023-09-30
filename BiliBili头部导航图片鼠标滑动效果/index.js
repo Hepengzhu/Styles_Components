@@ -6,4 +6,5 @@ header.addEventListener('mousemove',(e)=>{
     let percentage = e.clientX / window.outerWidth
     // 将百分比给css变量
     header.style.setProperty('--percentage',percentage)
+    console.log(percentage);
 })
