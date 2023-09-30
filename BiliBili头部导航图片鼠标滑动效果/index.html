@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- 两个盒子分开，为了实现移动差的效果 -->
+        <div class="view">
+            <!-- 冬-白天 -->
+            <img src="./img/bilibili-winter-view-1.jpg" class="morning">
+            <!-- 冬- 下午 -->
+            <img src="./img/bilibili-winter-view-2.jpg" class="afternoon">
+            <!-- 自动 循环 静音    晚上火炉闪光(一个视频)-->
+            <video autoplay loop muted  class="evening">
+                <source src="./img/bilibili-winter-view-3.webm" type="video/webm" >
+            </video>
+            <!-- 玻璃上的雪 -->
+            <img src="./img/bilibili-winter-view-3-snow.png" class="window-cover">      
+        </div>
+
+        <div class="tree">
+            <!-- 右边不同时间的三棵树  -->
+            <img src="./img/bilibili-winter-tree-1.png" alt="" class="morning">
+            <img src="./img/bilibili-winter-tree-2.png" alt="" class="afternoon">
+            <img src="./img/bilibili-winter-tree-3.png" alt="" class="evening">
+        </div>
+    </header>
+
+</body>
+</html>

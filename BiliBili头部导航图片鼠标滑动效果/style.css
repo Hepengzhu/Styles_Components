@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置显示区域 */
+header {
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 将 view tree 重叠 且内容居中  */
+header .view , header .tree {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 将图片和视频重叠 */
+header img , header video {
+    position: absolute;
+    display: block;
+    height: 100%;
+    /* 为了移动效果 */
+    width: 120%;
+
+    /* 保持其宽高比，并尽可能填充满整个父容器 */
+    object-fit:cover;
+}
+
+/* 设置层级 */
+/* 早上的应在最上层 */
+header .morning {
+    z-index: 20;
+}
+
+header .afternoon {
+    z-index: 10;
+}
+
+header .view {
+    transform: translateX(calc(var(--percentage)*100px));
+}
+
+header .tree {
+    transform: translateX(calc(var(--percentage)*100px));
+}
