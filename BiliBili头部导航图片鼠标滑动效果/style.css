@@ -8,6 +8,9 @@ header {
     height: 160px;
     position: relative;
     overflow: hidden;
+    
+    /* 初始值为0.5(中间) */
+    --percentage : 0.5
 }
 
 /* 将 view tree 重叠 且内容居中  */
@@ -58,4 +61,28 @@ header .view {
 /* 通过移动不同的距离的实现视觉差 */
 header .tree {
     transform: translateX(calc(var(--percentage)*70px));
+    filter: blur(0.5px);
+}
+
+/* 鼠标移出 恢复原样 添加过渡 */
+header .morning,
+header .afternoon,
+header .tree,
+header .view {
+    transition: all 2s ease-out;
+}
+
+/* 鼠标移动时，取消过度效果 */
+/* header.moving：这是一个选择同时具有 "moving" 类名的 <header> 元素的样式规则。
+只有当 <header> 元素同时具有 "moving" 类名时，该规则才会匹配 */
+header.moving .morning,
+header.moving .afternoon,
+header.moving .tree,
+header.moving .view {
+    transition: none;
+}
+
+/* 添加 窗户的雪 */
+header .window-cover {
+    opacity: calc((var(--percentage) - 0.9) / 0.1);
 }

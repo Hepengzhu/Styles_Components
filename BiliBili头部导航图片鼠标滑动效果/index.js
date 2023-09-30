@@ -4,6 +4,7 @@ const header = document.querySelector('header')
 header.addEventListener('mouseenter',(e)=>{
     // 记录鼠标进入时的位置
     startingPoint = e.clientX
+    header.classList.add('moving')
 })
 // 绑定鼠标移动事件
 header.addEventListener('mousemove',(e)=>{
@@ -12,8 +13,8 @@ header.addEventListener('mousemove',(e)=>{
     let percentage = (e.clientX - startingPoint) / window.outerWidth + 0.5   // 任何切入点都转换成中心点
     // 将百分比给css变量
     header.style.setProperty('--percentage',percentage)
-    console.log(percentage);
 })
-header.addEventListener('mouseleave',()=>{
+header.addEventListener('mouseout',()=>{
+    header.classList.remove('moving')
     header.style.setProperty('--percentage',0.5)
 })
